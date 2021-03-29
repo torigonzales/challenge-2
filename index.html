@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="earth">
 
 <head>
     <meta charset="utf-8">
@@ -62,18 +62,93 @@
 
         <div id="section-recent-projects">
             <div class="container main-container">
-                <a class="feature-box-container large">
-                    <div class="feature-box"
-                        style="background: url(./assets/images/pic2.jpg);">
+                <div class="header-container">
+                    <h2>Recent Projects</h2>
+                </div>
+                <a class="feature-box-container large" href="file:///Users/victoriagonzales/Homework-mod-2-/index.html">
+                    <div class="feature-box" style="background: url(./assets/images/run-buddy.png);">
+                       
                         <div class="text-container">
                             <p class="title">Run Buddy</p>
                         </div>
                     </div>
                 </a>
+
+                <a class="feature-box-container">
+                    <div class="feature-box" style="background: url(./assets/images/surf-image.jpg);">
+                        <div class="text-container">
+                            <p class="title">Surf Report</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="feature-box-container">
+                    <div class="feature-box" style="background: url(./assets/images/LED-Wall.png);">
+                        <div class="text-container">
+                            <p class="title">LED Wall</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="feature-box-container">
+                    <div class="feature-box" style="background: url(./assets/images/calculator.jpg);">
+                        <div class="text-container">
+                            <p class="title">Calculator</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a class="feature-box-container">
+                    <div class="feature-box" style="background: url(./assets/images/pastel-puzzle1.jpg);">
+                        <div class="text-container">
+                            <p class="title">Pastel Puzzles</p>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
+        <div id="section-contact-me">
+            <div class="container main-container">
 
+                <div class="contact-info-container">
+                    <h2>Contact Me</h2>
+
+                    <p>
+                        P: <a href="tel:801-719-9515">801-719-9515</a>
+                    </p>
+
+                    <p>
+                        E: <a href="mailto:toriballinger@gmail.com">toriballinger@gmail.com</a>
+                    </p>
+
+                    <p>
+                        GitHub: <a href="https://github.com/torigonzales">https://github.com/torigonzales</a>
+                    </p>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div id="section-theme-switcher">
+            <div class="theme-button default" data-theme="default" onclick="window.switchTheme(this)">
+            </div>
+            <div class="theme-button earth" data-theme="earth" onclick="window.switchTheme(this)">
+            </div>
+            <div class="theme-button nature" data-theme="nature" onclick="window.switchTheme(this)">
+            </div>
+        </div>
     </div>
+    <script>
+        (function () {
+            function switchTheme(buttonElement) {
+                let theme=buttonElement.getAttribute('data-theme');
+                let htmlElement=document.querySelector('html');
+                htmlElement.setAttribute('data-theme', theme);
+            }
+            window.switchTheme=switchTheme;
+        })()
+    </script>
 </body>
 
 </html>

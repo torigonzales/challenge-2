@@ -3,16 +3,41 @@ html {
 }
 
 a, a:visited {
-    color: #1671d9;
+    color: #f3ac01;
 }
 
 a:hover {
-    color: #3088ee;
+    color: #f3dfa2;
 }
 
 a:active {
-    color: #1361b9;
+    color: #ffecd1;
 }
+/* ===-----===---=======----- */
+
+/* THEMES*/
+:root{
+    --theme-accent-1:#ffcb77;
+    --theme-accent-1-font: black;
+    --theme-accent-2:#fff1e6;
+    --theme-accent-2-font:#ffcb77;
+}
+
+[data-theme="earth"]{
+    --theme-accent-1: #e29578;
+    --theme-accent-1-font: black;
+    --theme-accent-2: #FED9B7;
+    --theme-accent-2-font: #FDFCE7;
+}
+
+[data-theme="nature"]{
+    --theme-accent-1: #ffd5c2;
+    --theme-accent-1-font: black;
+    --theme-accent-2:#a4c3b2;
+    --theme-accent-2-font:#f3d5b5;
+}
+
+
 
 /* ===-----===---=======----- */
 
@@ -24,6 +49,7 @@ a:active {
     justify-content: center;
     align-content: center;
     border-bottom: 1px solid #ccc;
+    background-color: #F07167;
 }
 
 #navbar-container {
@@ -90,8 +116,9 @@ a:active {
 /* SECTION-ME */
 
 #section-me {
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color:var(--theme-accent-2);
 }
 
 #section-me .main-container {
@@ -112,6 +139,7 @@ a:active {
 
 #section-me .about-container {
     width: 90%;
+    color: var(--theme-accent-2-font);
 }
 
 #section-me .title {
@@ -129,7 +157,6 @@ a:active {
     #section-me .image-container {
         width: 40%;
     }
-
     #section-me .about-container {
         width: 35%;
     }
@@ -143,15 +170,23 @@ a:active {
 
 /* SECTION-RECENT-PROJECTS*/
 
-#section-recent-projects {}
+#section-recent-projects {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 
 #section-recent-projects .main-container {
     display: flex;
-    flex-flow:row wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 #section-recent-projects .feature-box-container {
-    border: 8px solid tomato;
+    border: 8px solid var(--theme-accent-1);
+    width: 49%;
+    height: 200px;
+    margin-top: 15px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 }
 
 #section-recent-projects .feature-box-container.large {
@@ -162,6 +197,8 @@ a:active {
 #section-recent-projects .feature-box {
     height: 100%;
     position: relative;
+    object-fit: contain;
+    
 }
 
 #section-recent-projects .text-container {
@@ -175,10 +212,41 @@ a:active {
 
 #section-recent-projects .title {
     margin: 0;
-    color: white;
-    background: tomato;
+    color: var( --theme-accent-1-font);
+    background: var(--theme-accent-1);
     padding: 10px;
 }
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {
+    #section-recent-projects .feature-box-container {
+        height: 300px;
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
+
+/* ===-----===---=======----- */
+
+/* SECTION-CONTACT-ME*/
+
+#section-contact-me{
+    padding-top: 50px;
+    background-color: #e6ccb2;
+}
+
+#section-contact-me .contact-info-container{
+display: flex;
+flex-flow: row wrap;
+justify-content: space-evenly;
+align-items: center;
+
+
+}
+
 
 @media (min-width: 576px) {}
 
@@ -187,3 +255,50 @@ a:active {
 @media (min-width: 992px) {}
 
 @media (min-width: 1200px) {}
+
+/* ===-----===---=======----- */
+
+/* SECTION-THEME-SWITCHER */
+#section-theme-switcher{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background-color: #F07167;
+}
+
+#section-theme-switcher .theme-button{
+    width: 15px;
+    height: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: black;
+    border-radius: 500px;
+    cursor: pointer;
+    opacity: .9;
+}
+#section-theme-switcher .theme-button:hover{
+    opacity: .8;
+
+}
+
+#section-theme-switcher .theme-button:active{
+    opacity: 1;
+}
+
+
+#section-theme-switcher .theme-button.default{
+    background-color: #FED9B7;
+    
+
+}
+
+#section-theme-switcher .theme-button.earth{
+    background-color: #ffbf69;
+
+}
+
+#section-theme-switcher .theme-button.nature{
+    background-color:#a4c3b2;
+}
